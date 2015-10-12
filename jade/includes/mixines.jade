@@ -1,0 +1,58 @@
+mixin breadcrumb(nivel)
+	.breadcrumb
+		.container
+			ul
+				li
+					a(href='index.html')
+						i.fa.fa-home
+				li
+					i.fa.fa-angle-right
+					a(href='#')
+						span #{nivel}
+
+mixin bookshelve(tag)
+	a(href="detalle.html").book
+		if (tag == "destacado")
+			span.tag.blue Destacado
+		if (tag == "vendido")
+			span.tag.green Más vendido
+		if (tag == "nuevo")
+			span.tag.pink Nuevo
+		img(src="img/book.gif")
+
+	
+mixin book(titulo, autor, precio, tag, orientacion)
+	.the-book
+		a(href="detalle.html").book
+			div(class=(orientacion == 'v' ? 'vertical' : 'horizontal'))
+				if (tag == "destacado")
+					span.tag.blue Destacado
+				if (tag == "vendido")
+					span.tag.green Más vendido
+				if (tag == "nuevo")
+					span.tag.pink Nuevo
+				if (orientacion == "v")
+					img(src="img/book.gif")
+				if (orientacion == "h")
+					img(src="img/book-h.gif")
+
+			h3 #{titulo}
+			span.autor #{autor}
+			.meta
+				span.precio #{precio}
+				.more Ver más
+
+mixin pagination()
+	.pagination
+		ul
+			li
+				a(href="#") 
+					i.fa.fa-chevron-left
+			li: a(href="#").active 1
+			li: a(href="#") 2
+			li: a(href="#") 3
+			li: a(href="#") 4
+			li: a(href="#") 5
+			li
+				a(href="#") 
+					i.fa.fa-chevron-right

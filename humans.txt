@@ -1,0 +1,13 @@
+﻿/* TEAM */
+                            
+Name: Violeta Rosales
+Position: Design & Front-End Developer
+Site: http://www.violetarosales.com
+Twitter: @violetisha
+Location: Mexico City
+                         
+/* SITE */
+                            
+Last update: 09/10/2015
+Standards: HTML5, CSS3
+Software: Handcrafted with love in Sublime Text 2. Preprocessed with JADE, SASS Y COMPASS.

@@ -1,0 +1,140 @@
+include includes/mixines
+doctype html
+- location = "home"
+html 
+	include includes/head
+
+		
+	body
+
+		include includes/header
+
+		// ========================
+		// Slideshow
+		// ========================
+		.panel-slideshow
+			.item-slideshow(style="background-image: url(img/slide-01.jpg)")
+				h1: span Consultoría Cultural
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+
+		// ========================
+		// Quiénes Somos
+		// ========================	
+		.panel-quienes-somos
+			.container
+				h2: span ¿Quiénes somos?
+				.columns-2
+					p Para tener una buena comunicación se debe seleccionar la audiencia objetivo para recibir el mensaje preciso en el medio adecuado. Para nosotros, el mensaje es una historia, una historia que genera confianza, que genera apego y que al final produce aprecio por quienes están representados en la historia.
+					p Es por eso que formamos un equipo multidisciplinario de Antropólogos, Historiadores, Arqueólogos, Museólogos, Arquitectos entre otros que se han especializado a lo largo de los años en la interpretación del patrimonio a fin de llevar el conocimiento científico al usuario objetivo.
+					p Además contamos con un equipo de expertos en diseño gráfico, experiencia de usuario, marketing y desarrollo de software que nos permite utilizar el medio adecuado para que la historia que contemos esté al alcance de las personas en el formato más conveniente.
+		
+		// ========================
+		// Qué hacemos
+		// ========================
+		.panel-que-hacemos
+			.container
+				h2: span ¿Qué hacemos?
+
+				.the-grid-04
+					.item-hacemos
+						.icon
+							i.fa.fa-file-text-o
+						h3 Interpretamos
+						p Interpretación del patrimonio
+						p Investigación
+						p Museos y exposiciones
+
+					.item-hacemos
+						.icon
+							i.fa.fa-check-circle-o
+						h3 Evaluamos
+						p Estudios de público y evaluación de proyectos.
+
+					.item-hacemos
+						.icon
+							i.fa.fa-file-text-o
+						h3 Innovamos
+						p Nuevas tecnologías para el disfrute del patrimonio.
+
+					.item-hacemos
+						.icon
+							i.fa.fa-file-text-o
+						h3 Compartimos
+						p Capacitación especializada
+						p Consultoría y gestión cultural
+						p Enriquecimiento de ideas a través de nuestro blog
+						p Apoyos gráficos para proyectos
+
+
+		// ========================
+		// Portafolio
+		// ========================
+		.panel-portafolio
+			.container
+				h2: span Portafolio
+
+				.the-grid-03
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/2/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/3/", alt="placeholder")
+							
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+
+		// ========================
+		// Clientes
+		// ========================
+		.panel-clientes
+			.container
+				h2: span Clientes
+
+				p
+					i.fa.fa-bitcoin
+					i.fa.fa-git
+					i.fa.fa-paper-plane-o
+					i.fa.fa-yelp
+					i.fa.fa-cc-stripe
+					i.fa.fa-lastfm
+
+
+		// ========================
+		// Contacto
+		// ========================
+		.panel-contacto
+			.container
+				h2: span ¡Platícanos!
+				p Juntos podemos desarrollar tu idea.
+
+				form(id="formulario", method="post", action="send.php")
+					input(type="text", placeholder="Nombre", id="nombre", name="nombre")
+					input(type="email", placeholder="Email", id="email", name="email")
+					input(type="text", placeholder="Asunto", id="asunto", name="asunto")
+					textarea(placeholder="Mensaje", id="mensaje", name="mensaje")
+					.action
+						button(type="submit", ) Enviar
+
+
+
+
+
+
+		include includes/footer

@@ -1,0 +1,288 @@
+/*
+ * Theme Name: Tempus
+ * Description: Tema para Tempus
+ * Author: Violeta Rosales
+ * Author URI: http://www.violetarosales.com
+ * Version: 1.0
+ */
+
+/*
+ * CSS Compilado el: #{timestamp()}
+ */
+
+
+//
+// Imports
+// -------------------------------------------
+@import "init"
+@import url("css/font-awesome.css")
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,300")
+
+//
+// General
+// -------------------------------------------
+*:focus
+	outline: none
+
+body 
+	+Lato(400)
+
+p
+	font-size: 1em
+	line-height: 1.4em
+	margin-bottom: $spacer
+
+h2, h1
+	text-align: center
+	font-size: 3em
+	text-transform: uppercase
+	padding: $spacer*3 0 $spacer*3 0
+	color: $red
+	span
+		content: " "
+		background: url(img/h2-red-divider.png) bottom center no-repeat
+		height: 20px
+		width: 100%
+		display: inline
+		position: relative
+		padding-bottom: $spacer
+
+h1
+	color: white
+	text-shadow: 1px 1px 3px rgba(0,0,0,.3)
+	span
+		background: url(img/h2-white-divider.png) bottom center no-repeat
+
+h3
+	text-align: center
+	font-size: 1.5em
+	text-transform: uppercase
+	color: $red
+	margin: $spacer*1.5 0
+
+a
+	text-decoration: none
+	color: inherit
+
+.container
+	max-width: 1000px
+	+box-sizing(border-box)
+	padding: 0 $spacer
+	margin: 0 auto
+
+.button, input[type="submit"]
+
+body
+	>div
+		padding-bottom: $spacer*4
+
+//
+// Header
+// -------------------------------------------
+header
+	@extend %clearfix
+	padding: $spacer/2 0
+	position: fixed
+	width: 100%
+	background: white
+	z-index: 999
+	+box-shadow(0px 0px 20px 0px rgba(0,0,0,.3))
+
+	.logo
+		width: 180px
+		display: block
+		float: left
+		@extend %img-full
+
+
+//
+// Navigation
+// -------------------------------------------
+nav
+	float: right
+	li
+		display: inline-block
+		// padding: 19px $spacer/2 15px $spacer/2
+		padding: 19px $spacer 10px $spacer
+		a
+			color: $darkRed
+			text-transform: uppercase
+			text-decoration: none
+			display: block
+			padding-bottom: 5px
+			font-size: 1.1em
+			font-weight: 300
+			+single-transition(all, .3s)
+			border-bottom: 3px solid white
+			&:hover, &.active
+				color: $red
+				border-bottom: 3px solid $red
+
+
+//
+// Slider
+// -------------------------------------------
+.panel-slideshow
+	padding-top: 70px
+	padding-bottom: $spacer
+
+	.item-slideshow
+		height: 400px
+		background: no-repeat top center
+		background-size: cover
+
+		p
+			text-align: center
+			max-width: 50%
+			margin: 0 auto
+			text-shadow: 1px 1px 3px rgba(0,0,0,.3)
+			color: white
+			font-size: 1.2em
+			font-weight: 600
+
+
+//
+// Quiénes Somos
+// -------------------------------------------
+.panel-quienes-somos
+	.columns-2
+		+column-count(2)
+		+column-gap($spacer)
+
+//
+// Qué hacemos
+// -------------------------------------------
+.panel-que-hacemos
+	background: #666666
+	h2 span
+		color: white
+		background-image: url(img/h2-white-divider.png)
+	.item-hacemos
+		@extend %box-item
+		padding: $spacer/2
+		.icon
+			color: #CCC
+			font-size: 7em
+			text-align: center
+			padding-top: $spacer
+			+single-transition(color, .3s)
+		&:hover .icon
+			color: $red
+
+//
+// Portafolio
+// -------------------------------------------
+.panel-portafolio
+	background: #f7f7f7
+	.item-portafolio
+		@extend %box-item
+		@extend %img-full
+		.thumb
+			background: $red
+			img
+				+single-transition(opacity, .3s)
+		.info
+			padding: $spacer/2
+
+		h4
+			text-transform: uppercase
+			color: black
+			padding-bottom: $spacer/2
+			font-weight: 600
+			+single-transition(color, .3s)
+
+		a:hover
+			img
+				opacity: .3
+			h4
+				color: $red
+
+//
+// Clientes
+// -------------------------------------------
+.panel-clientes
+	text-align: center
+
+	i
+		font-size: 5em
+		margin-right: $spacer*3
+
+//
+// Contacto
+// -------------------------------------------
+.panel-contacto 
+	background: url(img/bg-contacto.jpg) no-repeat top center
+	background-size: cover
+	p
+		text-align: center
+		font-size: 1.3em
+
+	input, textarea
+		width: 32%
+		border: 1px solid #CCC
+		+box-sizing(border-box)
+		padding: $spacer
+		margin-right: 1.5%
+		border-radius: 3px
+		font-size: 1em
+		font-family: inherit
+		+single-transition(all, .3s)
+		&:last-of-type
+			margin-right: 0
+		&:focus
+			+box-shadow(0px 4px 10px 0px rgba(0,0,0,.2))
+	textarea
+		width: 100%
+		margin-right: 0
+		margin-top: $spacer
+		height: 300px
+
+	.action
+		text-align: center
+		margin-top: $spacer
+
+	button
+		background: $red
+		color: white
+		text-transform: uppercase
+		display: inline-block
+		padding: $spacer $spacer*2
+		border: none
+		font-size: 1em
+		font-family: inherit
+		+single-transition(background, .3s)
+		&:hover
+			background: $darkRed
+			cursor: pointer
+//
+// Footer
+// -------------------------------------------
+footer
+	padding: $spacer 0
+	background: #333
+
+	.the-grid-03 >div
+		margin-bottom: 0 !important
+
+	p
+		font-size: .7em
+		color: white
+		margin-bottom: 0
+		a
+			font-weight: 600
+		span
+			margin: 0 $spacer/2
+
+	.place
+		text-align: right
+
+	.copy
+		text-align: center
+
+
+//
+// Responsive. Yeah, bitch!
+// -------------------------------------------
+@media screen and (max-width: 600px)
+
+

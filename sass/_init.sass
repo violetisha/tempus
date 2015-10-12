@@ -1,0 +1,91 @@
+//
+// Imports
+// -------------------------------------------
+
+@import "compass/css3"
+@import "compass/reset"
+@import "compass/typography"
+
+
+//
+// Configuracion de colres y clases silenciosas
+// -------------------------------------------
+
+$red: #e82140
+$darkRed: #911a38
+
+
+// utils
+$spacer: 20px
+
+
+// clases silenciosas
+%clearfix
+	&:after
+		content: " "
+		display: block
+		clear: both
+		
+%img-full
+	img
+		width: 100%
+		height: auto
+		display: block
+
+%box-item
+	background: white
+	border: 1px solid #ccc
+	+box-sizing(border-box)
+	+single-transition(all, .3s)
+	&:hover
+		+box-shadow(0px 8px 20px 0px rgba(0,0,0,.2))
+
+=Lato($weight)
+	font-weight: #{$weight}
+	font-family: "Lato", sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
+	-ms-font-smoothing: antialiased
+	font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+
+
+
+//
+// THE GRID
+// -------------------------------------------
+.the-grid-02, .the-grid-03, .the-grid-04, .the-grid-05
+	@extend %clearfix
+	
+.the-grid-02
+	>div
+		width: 48%
+		float: left
+		margin: 0 2% 2% 0
+		&:nth-of-type(2n)
+			margin: 0 0 2% 0
+
+.the-grid-03
+	>div
+		width: 32%
+		float: left
+		margin: 0 2% 2% 0
+		&:nth-of-type(3n)
+			margin: 0 0 2% 0
+
+.the-grid-04
+	>div
+		width: 23.5%
+		float: left
+		margin: 0 2% 2% 0
+		&:nth-of-type(4n)
+			margin: 0 0 2% 0
+
+.the-grid-05
+	>div
+		width: 18.8%
+		float: left
+		margin: 0 1.4% 1.4% 0
+		&:nth-of-type(5n)
+			margin: 0 0 1.4% 0
