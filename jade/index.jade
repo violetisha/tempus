@@ -14,8 +14,9 @@ html
 		// ========================
 		#inicio.panel-slideshow
 			.item-slideshow(style="background-image: url(img/slide-01.jpg)")
-				h1: span Consultoría Cultural
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+				.item-text
+					h1: span Consultoría Cultural
+					p Entre los investigadores y el público, estamos los intérpretes
 
 		// ========================
 		// Quiénes Somos
@@ -74,13 +75,14 @@ html
 				h2: span ¡Platícanos!
 				p Juntos podemos desarrollar tu idea.
 
-				form(id="formulario", method="post", action="send.php")
-					input(type="text", placeholder="Nombre", id="nombre", name="nombre")
-					input(type="email", placeholder="Email", id="email", name="email")
-					input(type="text", placeholder="Asunto", id="asunto", name="asunto")
-					textarea(placeholder="Mensaje", id="mensaje", name="mensaje")
+				#form
+					input(type="text", placeholder="Nombre", id="nombre", required="true", name="nombre")
+					input(type="email", placeholder="Email", id="email", required="true", name="email")
+					input(type="text", placeholder="Asunto", id="asunto", required="true", name="asunto")
+					textarea(placeholder="Mensaje", id="mensaje", required="true", name="mensaje")
 					.action
-						button(type="submit", ) Enviar
+						button(type="submit")#send Enviar
+					#result
 
 
 

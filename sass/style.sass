@@ -15,7 +15,7 @@
 // Imports
 // -------------------------------------------
 @import "init"
-@import url("css/font-awesome.css")
+@import "font-awesome"
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,300")
 
 //
@@ -36,7 +36,7 @@ h2, h1
 	text-align: center
 	font-size: 3em
 	text-transform: uppercase
-	padding: $spacer*3 0 $spacer*3 0
+	padding: 0 0 $spacer*3 0
 	color: $red
 	span
 		content: " "
@@ -70,11 +70,9 @@ a
 	padding: 0 $spacer
 	margin: 0 auto
 
-.button, input[type="submit"]
-
 body
 	>div
-		padding-bottom: $spacer*4
+		padding: $spacer*6 0 
 
 //
 // Header
@@ -114,10 +112,12 @@ nav
 			font-weight: 300
 			+single-transition(all, .3s)
 			border-bottom: 3px solid white
-			&:hover, &.active
+			&:hover
 				color: $red
-				border-bottom: 3px solid $red
-
+				
+		&.active a
+			color: $red
+			border-bottom: 3px solid $red
 
 //
 // Slider
@@ -127,9 +127,16 @@ nav
 	padding-bottom: $spacer
 
 	.item-slideshow
-		height: 400px
-		background: no-repeat top center
+		height: 600px
+		background: no-repeat center center
 		background-size: cover
+		line-height: 600px
+
+		.item-text
+			display: inline-block
+			width: 100%
+			vertical-align: middle
+			line-height: 16px
 
 		p
 			text-align: center
